@@ -42,6 +42,6 @@ export DESIGNS=$HOME/eda/designs
 ./start_x.sh
 ```
 
-     - When user runs the script, the OSIC tool terminal should popup.
-     - change PDK: `sak-pdk sky130A`
+- When user runs the script, the OSIC tool terminal should popup.
+- change PDK: `sak-pdk sky130A`
      
