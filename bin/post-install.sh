@@ -11,3 +11,10 @@ then
   exit 1
 fi
 
+if [ $1 == "update" ]
+then
+  echo "########################"
+  echo "# UPDATING DISTRO "
+  echo "########################"
+  sudo apt update -y && sudo apt upgrade -y
+fi
