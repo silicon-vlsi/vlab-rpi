@@ -40,12 +40,21 @@ then
   echo "########################"
   echo "# INSTALLING DOCKER PKGs "
   echo "########################"
+  #  docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin \
+  # Had errors while using apt install so downloaded the packages from
+  # https://download.docker.com/linux/ubuntu/dists/noble/pool/stable/arm64/
+  # Stick to the order.. it may matter
   pkg_docker_arr=( \
-    docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin \
+    containerd.io_2.2.0-2~ubuntu.24.04~noble_arm64.deb \
+    docker-ce_29.1.3-1~ubuntu.24.04~noble_arm64.deb \
+    docker-ce-cli_29.1.3-1~ubuntu.24.04~noble_arm64.deb \
+    docker-buildx-plugin_0.30.1-1~ubuntu.24.04~noble_arm64.deb \
+    docker-compose-plugin_5.0.1-1~ubuntu.24.04~noble_arm64.deb \
 	 )
  for i in ${pkg_docker_arr[*]}
    do
-     sudo apt install $i -y
+     $sudo apt install $i -y
+     sudo dpkg -i $i
    done 
 fi
 
