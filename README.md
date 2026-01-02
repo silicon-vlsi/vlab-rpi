@@ -27,18 +27,18 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
   - REBOOT
   - Unpin some unecessary Apps from the dash: Firefox, Rythmbox, etc.
   - Install some essentials (vim, chromium, etc): `$HOME/gits/vlap-rpi/bin/post-install.sh pkg1`
+  - **Docker Installation**
+    - Check `https://docs.docker.com/engine/install/ubuntu`
+    -  Setup the apt repo for docker: `$HOME/gits/bin/docker-apt-setup.sh` 
+    - Install docker: `sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
+    - Check: `sudo systemctl status docker`
+    - Ref: `https://docs.docker.com/engine/install/linux-postinstall`
+    - Add users to docker: `sudo usermod -aG docker $USER`
   - Prepare `IIC-OSIC-TOOLS` location
     - `cd /opt`
     - `sudo git clone --depth 1 https://github.com/iic-jku/IIC-OSIC-TOOLS.git`
     - `chown -R root:users IIC-OSC-TOOLS`
     - `chmod 755 IIC-OSIC-TOOLS`
-  - **Docker Installation**
-    - `https://docs.docker.com/engine/install/ubuntu`
-    - There is apt repo script in the above location, copy and run it.
-    - Install docker: `sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
-    - Check: `sudo systemctl status docker`
-    - Ref: `https://docs.docker.com/engine/install/linux-postinstall`
-    - Add users to docker: `sudo usermod -aG docker $USER`
     - Create `/usr/local/bin`:
 
 ```bash

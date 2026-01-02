@@ -8,6 +8,7 @@ then
   echo "DESCRIPTION: Options are "
   echo "  update:	Update the distro"
   echo "  pkg1:		Essentail pkgs (vim, chromium, etc)"
+  echo "  pkg-docker:	Docker pkgs "
   echo " "
   exit 1
 fi
@@ -29,6 +30,20 @@ then
 	 vim tree htop chromium \
 	 )
  for i in ${pkg1arr[*]}
+   do
+     sudo apt install $i -y
+   done 
+fi
+
+if [ $1 == "pkg-docker" ]
+then
+  echo "########################"
+  echo "# INSTALLING DOCKER PKGs "
+  echo "########################"
+  pkg_docker_arr=( \
+    docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin \
+	 )
+ for i in ${pkg_docker_arr[*]}
    do
      sudo apt install $i -y
    done 
