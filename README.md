@@ -30,8 +30,9 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
   - **Docker Installation**
     - Check `https://docs.docker.com/engine/install/ubuntu`
     -  Setup the apt repo for docker: `$HOME/gits/bin/docker-apt-setup.sh` 
-    - Install docker: `sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
-    - Check: `sudo systemctl status docker`
+    - Install docker: `$HOME/gits/vlap-rpi/bin/post-install.sh pkg-docker`
+      - **NOTE** When using `apt`, got into 404 download error. So downloaded the packages (.deb) from the [docker download](https://download.docker.com/linux/ubuntu/dists/noble/pool/stable/arm64/) and put it in this repo and isntalled it using `dpkg`. So will need to do manual update.
+    - Check if _active_: `sudo systemctl status docker`
     - Ref: `https://docs.docker.com/engine/install/linux-postinstall`
     - Add users to docker: `sudo usermod -aG docker $USER`
   - Prepare `IIC-OSIC-TOOLS` location
