@@ -18,16 +18,15 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
     - Storage: You should see the SSD something as `XP1000F256G (system-boot, writable)`
     - Customization: (Not allowed for custom image)
     - Writing: Write it !
-
 - **POST INSTALLATION**
   - Login as admin (user: `ubuntu`)
   - Install git: `sudo apt install git -y`
   - `mkdir gits; cd gits`
   - Clone the this repo: `git clone https://github.com/silicon-vlsi/vlab-rpi.git`
   - Update distro: `$HOME/gits/vlap-rpi/bin/post-install.sh update`
- 
-    
-  - Install some essentials: `vim, htop, tree, chromium`
+  - REBOOT
+  - Unpin some unecessary Apps from the dash: Firefox, Rythmbox, etc.
+  - Install some essentials (vim, chromium, etc): `vim, htop, tree, chromium`
   - Prepare `IIC-OSIC-TOOLS` location
     - `cd /opt`
     - `sudo git clone --depth 1 https://github.com/iic-jku/IIC-OSIC-TOOLS.git`
