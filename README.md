@@ -20,6 +20,10 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
     - Writing: Write it !
 
 - **POST INSTALLATION**
+  - Login as admin (user: `ubuntu`)
+  - Install git: `sudo apt install git -y`
+  - `mkdir gits; cd gits`
+  - Clone the this repo: `git clone https://github.com/silicon-vlsi/vlab-rpi.git`
   - Update distro
   - Install some essentials: `vim, htop, tree, chromium`
   - Prepare `IIC-OSIC-TOOLS` location
