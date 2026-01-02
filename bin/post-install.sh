@@ -53,8 +53,8 @@ then
 	 )
  for i in ${pkg_docker_arr[*]}
    do
-     $sudo apt install $i -y
-     sudo dpkg -i $i
+     # $sudo apt install $i -y
+     sudo dpkg -i $HOME/gits/vlab-rpi/docker/$i
    done 
 fi
 
