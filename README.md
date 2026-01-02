@@ -26,7 +26,7 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
   - Update distro: `$HOME/gits/vlap-rpi/bin/post-install.sh update`
   - REBOOT
   - Unpin some unecessary Apps from the dash: Firefox, Rythmbox, etc.
-  - Install some essentials (vim, chromium, etc): `vim, htop, tree, chromium`
+  - Install some essentials (vim, chromium, etc): `$HOME/gits/vlap-rpi/bin/post-install.sh pkg1`
   - Prepare `IIC-OSIC-TOOLS` location
     - `cd /opt`
     - `sudo git clone --depth 1 https://github.com/iic-jku/IIC-OSIC-TOOLS.git`
