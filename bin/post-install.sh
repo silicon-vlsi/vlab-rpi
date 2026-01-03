@@ -61,7 +61,7 @@ then
   #  docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin \
   # Had errors while using apt install so downloaded the packages from
   # https://download.docker.com/linux/ubuntu/dists/noble/pool/stable/arm64/
-  # Stick to the order.. it may matter
+  # Stick to the order.. 
   pkg_docker_arr=( \
     containerd.io_2.2.0-2~ubuntu.24.04~noble_arm64.deb \
     docker-ce-cli_29.1.3-1~ubuntu.24.04~noble_arm64.deb \
