@@ -31,7 +31,7 @@ for i in $(seq -f "%02g" 1 $NUM_USERS); do
 	echo "Creating /home/$USER/eda/designs and setting perm.."
 	mkdir -p /home/$USER/eda/designs
 	chown -R $USER:$USER /home/$USER/eda
-	chmod 755 $USER:$USER /home/$USER/eda
+	chmod -R 755 /home/$USER/eda
     fi
 done
 
