@@ -37,7 +37,7 @@ Instructions are for install and setup of Ubuntu 24.04 desktop Raspberry Pi 500+
   - Copy the `start-ic.sh` script to `/usr/local/bin`:
     - `sudo cp $HOME/gits/vlap-rpi/bin/start-ic.sh /usr/local/bin/.`
   - Before creating the user, add some user customization to /etc/skel : `$HOME/gits/vlap-rpi/bin/post-install.sh append-skel`
-  - **User creation** (currently 50): execute: `$HOME/gits/vlap-rpi/bin/create_users.sh`
+  - **User creation** (currently 50): execute: `sudo $HOME/gits/vlap-rpi/bin/create_users.sh`
     - The script will create users, add the users to docker and users group. After the users are created, the persistent folders for IIC-OSIC-TOOLS will be created with appropriate permissions.
 
 - **STARTING IIC OSIC TOOLS**
