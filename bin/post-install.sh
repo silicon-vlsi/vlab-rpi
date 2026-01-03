@@ -8,6 +8,7 @@ then
   echo "DESCRIPTION: Options are "
   echo "  update:	Update the distro"
   echo "  pkg1:		Essentail pkgs (vim, chromium, etc)"
+  echo "  setup-osic:   Setup /opt/IIC-OSIC-TOOLS with right perms"	
   echo "  pkg-docker:	Docker pkgs "
   echo "  append-skel:	Append /etc/skel/.bashrc "
   echo " "
@@ -20,6 +21,17 @@ then
   echo "# UPDATING DISTRO "
   echo "########################"
   sudo apt update -y && sudo apt upgrade -y
+fi
+
+if [ $1 == "setup-osic" ]
+then
+  echo "########################"
+  echo "# SETTING /opt/IIC-OSIC-TOOLS "
+  echo "########################"
+  cd /opt
+  sudo git clone --depth 1 https://github.com/iic-jku/IIC-OSIC-TOOLS.git
+  sudo chown -R root:users IIC-OSIC-TOOLS
+  sudo chmod 775 IIC-OSIC-TOOLS
 fi
 
 if [ $1 == "append-skel" ]
