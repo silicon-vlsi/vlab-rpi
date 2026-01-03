@@ -9,6 +9,7 @@ then
   echo "  update:	Update the distro"
   echo "  pkg1:		Essentail pkgs (vim, chromium, etc)"
   echo "  pkg-docker:	Docker pkgs "
+  echo "  append-skel:	Append /etc/skel/.bashrc "
   echo " "
   exit 1
 fi
@@ -19,6 +20,23 @@ then
   echo "# UPDATING DISTRO "
   echo "########################"
   sudo apt update -y && sudo apt upgrade -y
+fi
+
+if [ $1 == "append-skel" ]
+then
+  echo "########################"
+  echo "# APPEND /etc/skel/.bashrc"
+  echo "########################"
+  sudo tee -a /etc/skel/.bashrc <<EOF
+
+#CUSTOMIZATION
+alias date='date +%D'
+alias h='history'
+alias vimr='vim -R'
+alias rm='rm -i'
+alias du10='du -BM -s * .[^.]* | sort -n | tail -10'
+EOF
+
 fi
 
 if [ $1 == "pkg1" ]
