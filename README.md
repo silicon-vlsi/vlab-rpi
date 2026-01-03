@@ -25,7 +25,7 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
   - Clone the this repo: `git clone https://github.com/silicon-vlsi/vlab-rpi.git`
   - Update distro: `$HOME/gits/vlap-rpi/bin/post-install.sh update`
   - REBOOT
-  - Unpin some unecessary Apps from the dash: Firefox, Rythmbox, etc.
+  - Unpin some unecessary Apps from the dash: Rythmbox, etc.
   - Install some essentials (vim, chromium, etc): `$HOME/gits/vlap-rpi/bin/post-install.sh pkg1`
   - **Docker Installation**
     - Check `https://docs.docker.com/engine/install/ubuntu`
@@ -35,19 +35,10 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
     - Check if _active_: `sudo systemctl status docker`
     - Ref: `https://docs.docker.com/engine/install/linux-postinstall`
     - Add users to docker: `sudo usermod -aG docker $USER`
-  - Prepare `IIC-OSIC-TOOLS` location
-    - `cd /opt`
-    - `sudo git clone --depth 1 https://github.com/iic-jku/IIC-OSIC-TOOLS.git`
-    - `chown -R root:users IIC-OSC-TOOLS`
-    - `chmod 755 IIC-OSIC-TOOLS`
-    - Create `/usr/local/bin`:
-
-```bash
-cd /opt/IIC-OSIC-TOOLS
-export DESIGNS=$HOME/eda/designs
-./start_x.sh
-```
-
+  - Setup **IIC-OSIC-TOOLS** by executing: `$HOME/gits/vlap-rpi/bin/setup-osic.sh`
+  - Copy the `start-ic.sh` script to `/usr/local/bin`:
+    - `sudo cp $HOME/gits/vlap-rpi/bin/start-ic.sh /usr/local/bin/.`
+  - User creation:
 - When user runs the script, the OSIC tool terminal should popup.
 - change PDK: `sak-pdk sky130A`
      
