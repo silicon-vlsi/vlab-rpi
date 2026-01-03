@@ -45,7 +45,7 @@ then
   echo "# INSTALLING ESSENTIAL PKG1 "
   echo "########################"
   pkg1arr=( \
-	 vim tree htop chromium \
+	 vim tree htop \
 	 )
  for i in ${pkg1arr[*]}
    do
