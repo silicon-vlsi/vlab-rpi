@@ -38,7 +38,12 @@ Instructions are for install and setup of Ubuntu 24.04.3 LTS Server plus XFCE wi
   - Setup **IIC-OSIC-TOOLS** by executing: `$HOME/gits/vlap-rpi/bin/setup-osic.sh`
   - Copy the `start-ic.sh` script to `/usr/local/bin`:
     - `sudo cp $HOME/gits/vlap-rpi/bin/start-ic.sh /usr/local/bin/.`
-  - User creation:
-- When user runs the script, the OSIC tool terminal should popup.
-- change PDK: `sak-pdk sky130A`
+  - **User creation** (currently 50): execute: `$HOME/gits/vlap-rpi/bin/create_users.sh`
+    - The script will create users, add the users to docker and users group. After the users are created, the persistent folders for IIC-OSIC-TOOLS will be created with appropriate permissions.
+
+- **STARTING IIC OSIC TOOLS**
+  - After login, the user can start the docker: `start-ic.sh`
+  - The docker shell will start with `/foss/designs` folder which is mapped to `$HOME/eda/designs`. Create all persistent work area here. 
+  - The default PDK is IHP, to change to SKY130A, execute `sak-pdk sky130A`
+
      
