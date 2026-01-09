@@ -1,7 +1,7 @@
 # VLSI Lab on Raspberry Pi 500+
 
 
-# Installation
+# IIC-OSIC Tools Installation
 
 Instructions are for install and setup of Ubuntu 24.04 desktop Raspberry Pi 500+.
 
