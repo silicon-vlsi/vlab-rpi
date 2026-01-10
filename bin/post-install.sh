@@ -35,6 +35,7 @@ then
 #!/bin/bash
 #
 export DESIGNS=\$HOME/eda/designs
+export DOCKER_TAG=2025.12
 cd /opt/IIC-OSIC-TOOLS
 ./start_x.sh
 EOF
