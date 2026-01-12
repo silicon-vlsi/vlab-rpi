@@ -45,3 +45,26 @@ Instructions are for install and setup of Ubuntu 24.04 desktop Raspberry Pi 500+
   - The default PDK is IHP, to change to SKY130A, execute `sak-pdk sky130A`
 
      
+## Installing IIC-OSIC-tools from a local tarball
+
+Here's the recipe for 2025.12 (You can find the version in the docker repo: `hpretl/iic-osic-tools`) :
+
+**Creating a tarball of the docker image**
+
+**NOTE** The user needs to be in the group `docker` to run it in user mode.
+
+- `docker pull hpretl/iic-osic-tools:2025.12`
+- `docker save -o iic-osic-tools.tar hpretl/iic-osic-tools:2025.12`
+- Make the tarball `iic-osic-tools.tar` available on the target machine.
+
+**Install the Docker image from the tarball on the target maching**:
+
+- `docker load -i iic-osic-tools.tar`
+
+**To fix the version**, add the following in `~/.bashrc`
+
+- `DOCKER_TAG=2025.12`
+
+Now the startup should be a matter of seconds:  `./start_x.sh`
+
+
