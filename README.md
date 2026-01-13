@@ -21,6 +21,7 @@ Instructions are for install and setup of Ubuntu 24.04 desktop Raspberry Pi 500+
   - Login as admin (user: `ubuntu`)
   - &#128073; DISABLE the auto siftware update when it pops up.
   - &#128073; **COPY** `iic-osic-tools.tar` from the USB stick to the location `/opt`
+    - To find the mount location, use the command `lsblk`
   - &#128073; Install git: `sudo apt install git -y`
   - &#128073; `mkdir gits; cd gits`
   - &#128073; Clone the this repo: `git clone https://github.com/silicon-vlsi/vlab-rpi`
