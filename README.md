@@ -7,11 +7,12 @@ Instructions are for install and setup of Ubuntu 24.04 desktop Raspberry Pi 500+
 
 - **CREATE UBUNTU 24.04 DESKTOP USB/SDC BOOT DEVICE**
   - Using [Raspberry Pi Imager](https://www.raspberrypi.com/software/) create a bootable USB for a full Raspbian OS (or other distro).
-- **BOOT SDC/USB**
+- **INSTALL ON BOOT SDC/USB (ONE TIME)**
   - &#128073; Boot the SDC/USB from RasPi500+ (by pressing Space Bar repeatedly till you get the boot menu.)
   - The first boot will install the distro on the device itself usb/sdc.
   - Update the distro.
   - Download the `ubuntu-24.04.3-preinstalled-desktop-arm64+raspi.img.xz` from https://ubuntu.com/download/raspberry-pi
+- **POST BOOT SDC/USB**
   - Write the image to the RasPi NVMe SSD:
     - &#128073; `sudo rpi-imager --cli ubuntu-24.04.3-preinstalled-desktop-arm64+raspi.img.xz /dev/nvme0n1`
       - Do a `lsblk` to find the NVMe device name.
