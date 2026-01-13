@@ -85,7 +85,7 @@ then
   echo "# INSTALLING ESSENTIAL PKG1 "
   echo "########################"
   pkg1arr=( \
-	 vim tree htop \
+	 vim tree htop git\
 	 iverilog gtkwave \
 	 )
  for i in ${pkg1arr[*]}
