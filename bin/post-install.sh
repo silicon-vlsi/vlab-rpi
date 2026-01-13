@@ -75,9 +75,6 @@ then
   sudo git clone --depth 1 https://github.com/iic-jku/IIC-OSIC-TOOLS.git
   sudo chown -R root:users IIC-OSIC-TOOLS
   sudo chmod -R 755 IIC-OSIC-TOOLS
-  echo "Downloading iic-osic-tools.tar ....will take some time.."
-  sudo wget http://192.168.11.237/repos/share/iic-osic-tools.tar
-  sync
   echo "Loading the docker"
   sudo docker load -i iic-osic-tools.tar
 fi
