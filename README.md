@@ -66,7 +66,7 @@ Here's the recipe for 2025.12 (You can find the version in the docker repo: `hpr
 
 **To fix the version**, add the following in `~/.bashrc`
 
-- `DOCKER_TAG=2025.12`
+- `export DOCKER_TAG=2025.12`
 
 Now the startup should be a matter of seconds:  `./start_x.sh`
 
